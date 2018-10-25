@@ -41,7 +41,7 @@ Ensure the following before you begin:
   - From the remainder, it filters out non-SharePoint add-ins and add-ins that use asymmetric keys, such as workflows.
 
   ```powershell
-    $applist = Get-MsolServicePrincipal -all  |Where-Object -FilterScript { ($_.DisplayName -notlike "*Microsoft*") -and ($_.DisplayName -notlike "autohost*") -and  ($_.ServicePrincipalNames -notlike "*localhost*") }
+  $applist = Get-MsolServicePrincipal -all  |Where-Object -FilterScript { ($_.DisplayName -notlike "*Microsoft*") -and ($_.DisplayName -notlike "autohost*") -and  ($_.ServicePrincipalNames -notlike "*localhost*") }
 
   foreach ($appentry in $applist)
   {
